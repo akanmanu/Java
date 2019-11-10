@@ -154,11 +154,11 @@ class convertArabicToRoman {                             // Convert Arabic Numbe
         return map.get(l) + now(number-l);
      }
      else if (number < 0){
-          int l =  map.floorKey(number);
-        if ( number == l ) {
-            return "-" + map.get(number);
+          int l =  map.floorKey(-number);
+        if ( -number == l ) {
+            return "-" + map.get(-number);
         }
-        return "-" + map.get(l) + now(number-l);
+        return "-" + map.get(l) + now(-number-l);
      }
      else return "0" ;
     }
