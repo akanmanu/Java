@@ -188,7 +188,7 @@ class divide{                                //get the division
 }
 
 //------------------------------------------------------------------------------------------------------
-public class demo{                             //public class
+public class myCalculator{                             //public class
     
     public static void main(String[] args){   //Main
         //String input = "  I * I " ;
@@ -207,7 +207,7 @@ public class demo{                             //public class
             int b = splitArabic.b ;
             String operator = splitArabic.operator ;
             int result =  calculateMe.now(a , b , operator);
-            System.out.println("The result is " + result);
+            System.out.println("The result is = " + result);
         }
         else if (inputCheck.entryKind == "roman" ){
             splitRoman.now(input);
