@@ -191,7 +191,8 @@ public class myCalculator{                             //public class
     
     public static void main(String[] args){   //Main
         //String input = "  I * I " ;
-         System.out.println("Enter the operation : ");          //initialize the input field
+         System.out.println("Enter the operation:model:9 + 6 ");//initialize the input field
+         System.out.println("or:II + V ");
          Scanner inputField = new Scanner(System.in);
          String input = inputField.nextLine(); 
 
