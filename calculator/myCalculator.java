@@ -18,7 +18,6 @@ class inputCheck{                                                       //Check 
                      && isOperator(inputSplited[1]) ){
                             entryKind = ("roman");
                 }
-
            else System.out.println ("Bad Entry. RESPECT the input rule");  //Throw bad Entry
        }
         catch (Exception e) {
@@ -192,30 +191,28 @@ public class myCalculator{                             //public class
     
     public static void main(String[] args){   //Main
         //String input = "  I * I " ;
-         System.out.println("Enter the operation : ");
+         System.out.println("Enter the operation : ");          //initialize the input field
          Scanner inputField = new Scanner(System.in);
          String input = inputField.nextLine(); 
 
         inputCheck.now(input); 
-        if(inputCheck.entryKind == "arabic" ){
-            splitArabic.now(input);
-            
-            int a = splitArabic.a ;
-            int b = splitArabic.b ;
-            String operator = splitArabic.operator ;
+        if(inputCheck.entryKind == "arabic" ){              //Check if entry is with arabic numbers
+            splitArabic.now(input);                 
+            int a = splitArabic.a ;                         //set a
+            int b = splitArabic.b ;                         //set b
+            String operator = splitArabic.operator ;           //set the operator
             int result =  calculateMe.now(a , b , operator);
             System.out.println("The result is = " + result);
         }
-        else if (inputCheck.entryKind == "roman" ){
+        else if (inputCheck.entryKind == "roman" ){         //Check if entry is with roman numbers
             splitRoman.now(input);
-            
             String aRoman = splitRoman.aRoman;
             String bRoman = splitRoman.bRoman;
             String operator = splitRoman.operator;
-            int a = convertRomanToArabic.now(aRoman);
-            int b = convertRomanToArabic.now(bRoman);
-            int arabicResult = calculateMe.now(a , b , operator) ;
-           System.out.println("The result is " + convertArabicToRoman.now(arabicResult));
+            int a = convertRomanToArabic.now(aRoman);       // set a
+            int b = convertRomanToArabic.now(bRoman);       // set b
+            int arabicResult = calculateMe.now(a , b , operator) ; //set the operator
+           System.out.println("The result is = " + convertArabicToRoman.now(arabicResult));
 
         } 
     }
