@@ -195,10 +195,7 @@ public class myCalculator{                             //public class
          System.out.println("Enter the operation : ");
          Scanner inputField = new Scanner(System.in);
          String input = inputField.nextLine(); 
-        //  splitArabic.now(operation);
-        //   calculateMe.now();
-        // System.out.println("The result is : ");
-        // calculateMe.showResult();
+
         inputCheck.now(input); 
         if(inputCheck.entryKind == "arabic" ){
             splitArabic.now(input);
